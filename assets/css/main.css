@@ -60,6 +60,7 @@
 	/* Grid */
 
 	.row {
+		position: relative;
 		border-bottom: solid 1px transparent;
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
@@ -953,7 +954,7 @@
 	.button {
 		-webkit-appearance: none;
 		display: inline-block;
-		background-color: #222222;
+		background-color: grey;
 		color: #ffffff;
 		border: 0;
 		cursor: pointer;
@@ -1580,4 +1581,21 @@
 			display: none;
 		}
 
+	}
+
+	.works_header {
+		margin-bottom: 20px;
+	}
+
+	.button_wrapper {
+		text-align: center;
+	}
+
+	.button {
+		width: 100%;
+	}
+
+	.site_preview {
+		width: 250px;
+		height: 250px;
 	}
