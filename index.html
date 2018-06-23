@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#eb212e">
+  <title>Portfolio</title>
+  <link rel="shortcut icon" href="./favicon.ico" type="image/png" />
+  <link rel="stylesheet" href="css/vendor/animate.css">
+  <link rel="stylesheet" href="css/vendor/jquery.fullpage.min.css">
+  <link rel="stylesheet" href="css/vendor/fontawesome-all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="menu">
+    <nav>
+      <ul class="menu-list">
+        <li class="menu-item" data-menuanchor="about" class="active"><a href="#about" class="menu-link">#About</a></li>
+        <li class="menu-item" data-menuanchor="technologies"><a href="#technologies" class="menu-link">#Technologies</a></li>
+        <li class="menu-item" data-menuanchor="portfolio"><a href="#portfolio" class="menu-link">#Portfolio</a></li>
+        <li class="menu-item" data-menuanchor="contacts"><a href="#contacts" class="menu-link">#Contacts</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="menu-button menu-button-hidden wow fadeInLeft" data-wow-delay="1.5s" data-wow-duration=".5s">
+    <div class="menu-icon"></div>
+  </div>
+
+  <div class="main">
+
+    <div id="main-left-fp-nav" class="main-left-fp-nav wow fadeInLeft" data-wow-delay="2.8s" data-wow-duration=".2s"></div>
+
+    <div class="main-left main-left-mini">
+      <div class="preloader">
+        <div class="preloader-item preloader-item-1"></div>
+        <div class="preloader-item preloader-item-2"></div>
+      </div>
+
+      <div class="main-left-name">
+        <h2>Ruslan Koshevoy</h2>
+      </div>
+
+      <div id="uncollapse-button" class="collapse-button collapse-button-unsollapse"><i class="fas fa-arrow-right"></i></div>
+    </div>
+
+    <div class="main-left">
+      <div class="preloader">
+        <div class="preloader-item preloader-item-1"></div>
+        <div class="preloader-item preloader-item-2"></div>
+      </div>
+
+      <div class="main-left-text">
+        <div class="main-left-name wow fadeInLeft" data-wow-delay="2s" data-wow-duration=".5s">
+          <h1>Hello, my name is Ruslan Koshevoy</h1>
+        </div>
+
+        <div class="main-left-info wow fadeInLeft" data-wow-delay="2.1s" data-wow-duration=".5s">
+          <p>I am Front-End Developer</p>
+        </div>
+      </div>
+
+      <div id="collapse-button" class="collapse-button wow fadeInUp" data-wow-delay="3s" data-wow-duration=".3s"><i class="fas fa-arrow-left"></i></div>
+    </div>
+
+    <div class="main-right">
+      <div class="first-screen section">
+
+        <div class="section-text">
+          <h2>Briefly about me</h2>
+          <img src="img/my-photo.jpg" alt="my photo" class="my-photo">
+          <p>I'm 25 years old. Born in Slavyansk, live in Kharkov.</p>
+          <p>Finished my studies in January 2017, a graduate of the Department of Information Technologies. <br>Received a master's degree.</p>
+          <p>I'm working on improving my skills, and studying new ones.</p>
+        </div>
+      </div>
+
+      <div class="second-screen section">
+        <div class="section-text section-text-columns">
+          <div class="section-column">
+            <h2>I work with</h2>
+            <ul>
+              <li>HTML5;</li>
+              <li>CSS3;</li>
+              <li>SCSS/LESS;</li>
+              <li>Javascript;</li>
+              <li>jQuery;</li>
+              <li>AJAX;</li>
+              <li>Vue.js (beginning level);</li>
+              <li>Canvas (very basic level);</li>
+              <li>GULP;</li>
+              <li>GIT/SVN;</li>
+              <li>Photoshop (cutting a layout)</li>
+            </ul>
+          </div>
+          <div class="section-column">
+            <h2>I mark up</h2>
+            <ul>
+              <li>Adaptive / rubber / fixed;</li>
+              <li>Cross-browser;</li>
+              <li>Valid;</li>
+              <li>By BEM;</li>
+              <li>With bootstrap 3/4;</li>
+              <li>On ASP.NET WebForms & ASP.NET MVC</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="third-screen section section-portfolio">
+        <div class="portfolio">
+          <ul class="portfolio-list">
+
+            <li class="portfolio-item">
+              <div class="portfolio-item-image" style="background-image: url('img/portfolio/bestnuts.jpg')"></div>
+
+              <h3 class="portfolio-item-title">BestNuts</h3>
+
+              <div class="portolfio-item-bottom">
+                <a href="#" class="portfolio-item-details-button">About</a>
+                <a href="http://bestnuts.com.ua/" target="_blank" class="portfolio-item-view-button">View</a>
+              </div>
+
+              <div class="portfolio-item-details">
+                <p class="portfolio-item-description">
+                  BestNuts - internet store for selling nuts.<br>
+                  CMS - iLightStore (ASP.NET).<br>(Released)
+                </p>
+              </div>
+            </li>
+
+            <li class="portfolio-item">
+              <div class="portfolio-item-image" style="background-image: url('img/portfolio/kirpich-kharkov.jpg')"></div>
+
+              <h3 class="portfolio-item-title">Kirpich Kharkov</h3>
+
+              <div class="portolfio-item-bottom">
+                <a href="#" class="portfolio-item-details-button">About</a>
+                <a href="http://kirpich-kharkov.com.ua/" target="_blank" class="portfolio-item-view-button">View</a>
+              </div>
+
+              <div class="portfolio-item-details">
+                <p class="portfolio-item-description">
+                  Kirpich Kharkov - internet store for selling bricks.<br>CMS - iLightStore (ASP.NET).<br>(Released)
+                </p>
+              </div>
+            </li>
+
+            <li class="portfolio-item">
+              <div class="portfolio-item-image" style="background-image: url('img/portfolio/elektromod.jpg')"></div>
+
+              <h3 class="portfolio-item-title">Elektromod</h3>
+
+              <div class="portolfio-item-bottom">
+                <a href="#" class="portfolio-item-details-button">About</a>
+                <a href="http://elektromod.com.ua/" target="_blank" class="portfolio-item-view-button">View</a>
+              </div>
+
+              <div class="portfolio-item-details">
+                <p class="portfolio-item-description">
+                  Elektromod - internet store for selling everyday things.<br>CMS - iLightStore (ASP.NET).<br>(Released)
+                </p>
+              </div>
+            </li>
+
+            <li class="portfolio-item">
+              <div class="portfolio-item-image" style="background-image: url('img/portfolio/extremetour.jpg')"></div>
+
+              <h3 class="portfolio-item-title">ExtremeTour</h3>
+
+              <div class="portolfio-item-bottom">
+                <a href="#" class="portfolio-item-details-button">About</a>
+                <a href="http://extremetour-pro.internera.com/" target="_blank" class="portfolio-item-view-button">View</a>
+              </div>
+
+              <div class="portfolio-item-details">
+                <p class="portfolio-item-description">
+                  ExtremeTour - internet store for organization of a hike.<br>CMS - iLightStore (ASP.NET).
+                </p>
+              </div>
+            </li>
+
+            <li class="portfolio-item">
+              <div class="portfolio-item-image" style="background-image: url('img/portfolio/internera.jpg')"></div>
+
+              <h3 class="portfolio-item-title">Internera</h3>
+
+              <div class="portolfio-item-bottom">
+                <a href="#" class="portfolio-item-details-button">About</a>
+                <a href="https://internera.com/" target="_blank" class="portfolio-item-view-button">View</a>
+              </div>
+
+              <div class="portfolio-item-details">
+                <p class="portfolio-item-description">
+                  Internera - corporate web-site of web-development studio.<br>CMS - iLightSite (ASP.NET).<br>(Released)
+                </p>
+              </div>
+            </li>
+
+            <li class="portfolio-item">
+              <div class="portfolio-item-image" style="background-image: url('img/portfolio/komandor.jpg')"></div>
+
+              <h3 class="portfolio-item-title">Komandor</h3>
+
+              <div class="portolfio-item-bottom">
+                <a href="#" class="portfolio-item-details-button">About</a>
+                <a href="https://komandor-adm.com.ua/" target="_blank" class="portfolio-item-view-button">View</a>
+              </div>
+
+              <div class="portfolio-item-details">
+                <p class="portfolio-item-description">
+                  Komandor - corporate web-site for demonstration production of company.<br>CMS - iLightSite (ASP.NET).<br>(Released)
+                </p>
+              </div>
+            </li>
+
+            <li class="portfolio-item">
+              <div class="portfolio-item-image" style="background-image: url('img/portfolio/bf.jpg')"></div>
+
+              <h3 class="portfolio-item-title">Business-forum 2017</h3>
+
+              <div class="portolfio-item-bottom">
+                <a href="#" class="portfolio-item-details-button">About</a>
+                <a href="https://rkoshevoy.github.io/business-forum/" target="_blank" class="portfolio-item-view-button">View</a>
+              </div>
+
+              <div class="portfolio-item-details">
+                <p class="portfolio-item-description">
+                  Business-forum 2017 - landing page for internetional business-forum, that tool place in Kharkov in 2017.<br>(Released)
+                </p>
+              </div>
+            </li>
+
+            <li class="portfolio-item">
+              <div class="portfolio-item-image" style="background-image: url('img/portfolio/fitness-club.jpg')"></div>
+
+              <h3 class="portfolio-item-title">Fitness club</h3>
+
+              <div class="portolfio-item-bottom">
+                <a href="#" class="portfolio-item-details-button">About</a>
+                <a href="http://fitness-club.internera.com/" target="_blank" class="portfolio-item-view-button">View</a>
+              </div>
+
+              <div class="portfolio-item-details">
+                <p class="portfolio-item-description">
+                  Fitness club - landing page for gym in Kiev.<br>CMS - iLightSite (ASP.NET).
+                </p>
+              </div>
+            </li>
+
+            <li class="portfolio-item">
+              <div class="portfolio-item-image" style="background-image: url('img/portfolio/paint.jpg')"></div>
+
+              <h3 class="portfolio-item-title">My mini apps</h3>
+
+              <div class="portolfio-item-bottom">
+                <a href="#" class="portfolio-item-details-button">About</a>
+                <a href="https://rkoshevoy.github.io/mini-apps-collection/" target="_blank" class="portfolio-item-view-button">View</a>
+              </div>
+
+              <div class="portfolio-item-details">
+                <p class="portfolio-item-description">
+                  Here id my mini apps, which I developed for my skills.
+                </p>
+              </div>
+            </li>
+          </ul>
+
+          <button id="show-more" class="show-more-button">Show more</button>
+        </div>
+      </div>
+
+      <div class="fourth-screen section">
+        <div class="section-text">
+          <h2>Contacts</h2>
+
+          <p>Contact me if necessary. <br>All my communication ways are listed here.</p>
+
+          <div>
+            <ul class="contacts-list">
+              <li class="contacts-item">
+                <a href="mailto:ruslan.koshevoj@gmail.com">
+                  <i class="fas fa-envelope"></i>
+                  <div class="contact-details">
+                    <span>E-mail:</span>
+                    <span>ruslan.koshevoj@gmail.com</span>
+                  </div>
+                </a>
+              </li>
+              <li class="contacts-item">
+                <a href="https://t.me/r_koshevoy" target="_blank">
+                  <i class="fas fa-paper-plane"></i>
+                  <div class="contact-details">
+                    <span>Telegram:</span>
+                    <span>@r_koshevoy</span>
+                  </div>
+                </a>
+              </li>
+              <li class="contacts-item">
+                <a href="skype:r_koshevoy">
+                  <i class="fab fa-skype"></i>
+                  <div class="contact-details">
+                    <span>Skype:</span>
+                    <span>r_koshevoy</span>
+                  </div>
+                </a>
+              </li>
+              <li class="contacts-item">
+                <a href="tel:+380668331206">
+                  <i class="fas fa-phone"></i>
+                  <div class="contact-details">
+                    <span>Phone:</span>
+                    <span>+380668331206</span>
+                  </div>
+                </a>
+              </li>
+              <li class="contacts-item">
+                <a href="https://github.com/rkoshevoy" target="_blank">
+                  <i class="fab fa-github"></i>
+                  <div class="contact-details">
+                    <span>Github:</span>
+                    <span>rkoshevoy</span>
+                  </div>
+                </a>
+              </li>
+              <li class="contacts-item">
+                <a href="https://www.linkedin.com/in/rkoshevoy/" target="_blank">
+                  <i class="fab fa-linkedin-in"></i>
+                  <div class="contact-details">
+                    <span>LinkedIn:</span>
+                    <span>rkoshevoy</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="details-modal" class="details-modal">
+      <div class="modal-background-overlay"></div>
+
+      <div class="modal-body">
+        <div id="modal-close" class="modal-close"><i class="fas fa-times"></i></div>
+
+        <div class="modal-content">
+          <div class="modal-title" id="modal-title"></div>
+          <div class="modal-text" id="modal-text"></div>
+          <a href="#" class="modal-view-button" id="modal-view-button" target="_blank">View project</a>
+        </div>
+      </div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <script src="js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="js/vendor/wow.min.js"></script>
+    <script src="js/vendor/jquery.fullpage.min.js"></script>
+    <script src="js/vendor/scrolloverflow.min.js"></script>
+    <script src="js/vendor/particles-canvas.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
