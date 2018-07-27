@@ -1,0 +1,16 @@
+@each $font-include in OpenSans-Regular, OpenSans-Bold, OpenSans-Light, ComicSans {
+	@font-face{
+	   font-family: $font-include;
+	   src: url('../fonts/#{$font-include}.eot');
+	   src: url('../fonts/#{$font-include}.eot?#iefix') format('embedded-opentype'), url('../fonts/#{$font-include}.woff') format('woff'), url('../fonts/#{$font-include}.ttf') format('truetype'), url('../fonts/#{$font-include}.svg') format('svg');
+	   font-weight: normal;
+	   font-style: normal;
+   }
+}
+
+$OpenSans-Regular: OpenSans-Regular;
+$OpenSans-Bold: OpenSans-Bold;
+$OpenSans-Light: OpenSans-Light;
+$ComicSans: ComicSans;
+
+$main-font: $ComicSans;

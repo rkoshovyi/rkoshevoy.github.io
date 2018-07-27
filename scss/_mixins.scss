@@ -1,0 +1,7 @@
+@mixin transition($time: .5s) {
+  transition: all ease $time;
+}
+
+@mixin margin-l-r-auto {
+  margin: 0 auto;
+}
