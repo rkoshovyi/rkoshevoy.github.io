@@ -1034,6 +1034,10 @@
   img {
     width: 300px;
   }
+
+  @media ($s) {
+    display: none;
+  }
 }
 
 @keyframes superman-animation {
