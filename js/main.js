@@ -93,4 +93,19 @@ $(document).ready(function(){
   new WOW({
     mobile: false
   }).init();
+
+  // superman animation delay
+
+  function randomTime(min, max) {
+    return parseInt(Math.random() * (max - min) + min);
+  }
+
+  setTimeout(function() {
+    document.getElementById('superman').classList.add('animation');
+  }, randomTime(10000, 20000))
+
+  setTimeout(function() {
+    document.getElementById('superman').classList.remove('animation');
+    document.getElementById('superman').classList.add('animation-reverse');
+  }, randomTime(20000, 30000))
 })
