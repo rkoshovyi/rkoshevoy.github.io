@@ -1,9 +1,7 @@
 $(document).ready(function(){
 
   // start animations
-  setTimeout(function(){
-    $('.main-left').addClass('main-left-loaded')
-  }, 1000)
+  $('.main-left').addClass('main-left-loaded')
 
   // menu sahowing/hiding
   $('.menu-button').click(function(){
@@ -102,10 +100,10 @@ $(document).ready(function(){
 
   setTimeout(function() {
     document.getElementById('superman').classList.add('animation');
-  }, randomTime(10000, 20000))
+  }, randomTime(5000, 10000))
 
   setTimeout(function() {
     document.getElementById('superman').classList.remove('animation');
     document.getElementById('superman').classList.add('animation-reverse');
-  }, randomTime(20000, 30000))
+  }, randomTime(13000, 18000))
 })
