@@ -1,7 +1,9 @@
 $(document).ready(function(){
 
   // start animations
-  $('.main-left').addClass('main-left-loaded')
+  setTimeout(function(){
+    $('.main-left').addClass('main-left-loaded')
+  }, 1000)
 
   // menu sahowing/hiding
   $('.menu-button').click(function(){
