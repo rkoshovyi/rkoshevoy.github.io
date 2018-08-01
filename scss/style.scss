@@ -1097,3 +1097,38 @@
     background-color: $white;
   }
 }
+
+
+.eyes-block {
+  background: white;
+}
+
+.my-photo {
+  z-index:1;
+}
+
+.eye-container {
+  position: absolute;
+  top: 237px;
+  left: 595px;
+
+  &.eye-container2 {
+    top: 237px;
+    left: 481px;
+  }
+
+  .eye-ball {
+    width:100%;
+    height:auto;
+  }
+
+  .eyeball {
+    width: 62px;
+    height: 30px;
+  }
+
+  .iris, .iris2 {
+    width: 25px;
+    height: 25px;
+  }
+}
