@@ -104,7 +104,7 @@ $(document).ready(function(){
   setTimeout(function() {
     document.getElementById('superman').classList.remove('animation');
     document.getElementById('superman').classList.add('animation-reverse');
-  }, randomTime(13000, 18000))
+  }, randomTime(15000, 20000))
 
 
   $('.iris').xeyes();

@@ -537,13 +537,81 @@
       }
     }
 
-    .my-photo {
+    .photo-wrapper {
+      position: relative;
       width: 15vw;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 0 auto;
 
       @media ($s) {
         width: 260px;
+        margin-bottom: 20px;
+      }
+
+      .photo {
+        z-index: 1;
+        width: 15vw;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media ($s) {
+          width: 260px;
+        }
+      }
+
+      .eyes-block {
+        position: relative;
+      }
+
+      .eye-container {
+        position: absolute;
+        z-index: -1;
+        top: 40%;
+        left: 20%;
+        margin-bottom: 0;
+        background-color: #fff;
+
+        @media ($s) {
+          top: 173px;
+          left: 52px;
+        }
+
+        &.eye-container2 {
+          left: auto;
+          right: 25%;
+
+          @media ($s) {
+            top: 175px;
+            right: 64px;
+          }
+        }
+
+        .eye-ball {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width:100%;
+          height:auto;
+        }
+
+        .eyeball {
+          width: 2.5vw;
+          height: 2vw;
+
+          @media ($s) {
+            width: 45px;
+            height: 22px;
+          }
+        }
+
+        .iris, .iris2 {
+          width: 1vw;
+          height: 1vw;
+
+          @media ($s) {
+            width: 15px;
+            height: 15px;
+          }
+        }
       }
     }
 
@@ -1095,40 +1163,5 @@
 
   ul li a span {
     background-color: $white;
-  }
-}
-
-
-.eyes-block {
-  background: white;
-}
-
-.my-photo {
-  z-index:1;
-}
-
-.eye-container {
-  position: absolute;
-  top: 237px;
-  left: 595px;
-
-  &.eye-container2 {
-    top: 237px;
-    left: 481px;
-  }
-
-  .eye-ball {
-    width:100%;
-    height:auto;
-  }
-
-  .eyeball {
-    width: 62px;
-    height: 30px;
-  }
-
-  .iris, .iris2 {
-    width: 25px;
-    height: 25px;
   }
 }
