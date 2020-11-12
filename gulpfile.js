@@ -1,5 +1,7 @@
 // unnecessary need to remove
 
+// npm i gulp gulp-sass gulp-less gulp-plumber gulp-postcss gulp-autoprefixer css-mqpacker gulp-clean-css gulp-uncss gulp-sourcemaps gulp-rename gulp-cssbeautify browser-sync gulp-imagemin gulp-svgstore gulp-svgmin del gulp-uglify pump
+
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     plumber = require('gulp-plumber'),
@@ -7,6 +9,7 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     mqpacker = require('css-mqpacker'),
     minify = require('gulp-clean-css'),
+    uncss = require('gulp-uncss'),
     sourcemaps = require('gulp-sourcemaps'),
     rename = require('gulp-rename'),
     beautify = require('gulp-cssbeautify'),
@@ -14,10 +17,10 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     svgstore = require('gulp-svgstore'),
     svgmin = require('gulp-svgmin'),
-    run = require('run-sequence'),
     del = require('del'),
     uglify = require('gulp-uglify'),
     pump = require('pump');
+
 
 gulp.task('scss', function() {
   return gulp.src('scss/**/*.scss')
@@ -41,11 +44,11 @@ gulp.task('browser-sync', function() {
   });
 });
 
-gulp.task('watch', ['browser-sync', 'scss'], function() {
-  gulp.watch('scss/**/*.scss', ['scss']);
-  gulp.watch('./*.html', browserSync.reload);
-  gulp.watch('./js/**/*.js', browserSync.reload);
-});
+gulp.task('watch', gulp.parallel('browser-sync', 'scss', function() {
+  gulp.watch('scss/**/*.scss').on('change', gulp.series('scss'));
+  gulp.watch('./*.html').on('change', gulp.series(browserSync.reload));
+  gulp.watch('./js/**/*.js').on('change', gulp.series(browserSync.reload));
+}));
 
 gulp.task('clean', function() {
   return del('build');
@@ -55,8 +58,8 @@ gulp.task('copy', function() {
   return gulp.src([
       'fonts/**',
       'img/**',
-      'js/**',
-      'css/**',
+      'js/**/*.js',
+      'css/**/*.css',
       '*.html'
     ], {
       base: "."
@@ -71,6 +74,9 @@ gulp.task('css', function() {
         sort: true
       })
     ]))
+    .pipe(uncss({
+            html: ['build/*.html']
+    }))
     .pipe(autoprefixer({
       browsers: [
         'last 3 versions'
@@ -78,9 +84,7 @@ gulp.task('css', function() {
     }))
     .pipe(gulp.dest('build/css'))
     .pipe(minify())
-    .pipe(rename(function(path) {
-      path.extname = '.min.css'
-    }))
+    .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('build/css'))
 });
 
@@ -88,6 +92,7 @@ gulp.task('scripts', function(cb) {
   pump([
       gulp.src('build/js/**/*.js'),
       uglify(),
+      rename({suffix: '.min'}),
       gulp.dest('build/js')
     ],
     cb
@@ -95,14 +100,14 @@ gulp.task('scripts', function(cb) {
 });
 
 gulp.task('images', function() {
-  return gulp.src('build/img/**/*.{png,jpg,gif}')
+  return gulp.src('build/img/**/*.{png,PNG,jpeg,jpg,JPG,gif,GIF}')
     .pipe(imagemin([
       imagemin.optipng({
         optimizationLevel: 3
       }),
       imagemin.jpegtran({
         progressive: true
-      }),
+      })
     ]))
     .pipe(gulp.dest('build/img'));
 });
@@ -117,15 +122,4 @@ gulp.task('symbols', function() {
     .pipe(gulp.dest('build/img'));
 });
 
-gulp.task('build', function(fn) {
-  run(
-    'scss',
-    'clean',
-    'copy',
-    'css',
-    'scripts',
-    'images',
-    'symbols',
-    fn
-  );
-});
+gulp.task('build', gulp.series('scss', 'clean', 'copy', 'css', 'scripts', 'images', 'symbols'));
