@@ -5,7 +5,7 @@ $(document).ready(() => {
 
   // menu sahowing/hiding
 
-  $('.menu-button').click(() => {
+  $('.menu-button').click(function() {
     $('.main').removeClass('main-reduced-left')
     $('.menu').toggleClass('open');
     $(this).toggleClass('open');
@@ -29,11 +29,11 @@ $(document).ready(() => {
 
   // menu collapsing
 
-  $('#collapse-button').click(() => {
+  $('#collapse-button').click(function() {
     $('.main').addClass('main-reduced-left');
   });
 
-  $('#uncollapse-button').click(() => {
+  $('#uncollapse-button').click(function() {
     $('.main').removeClass('main-reduced-left');
   });
 
@@ -51,7 +51,7 @@ $(document).ready(() => {
     $('.details-modal').addClass('details-modal-visible');
   });
 
-  $('.modal-close, .modal-background-overlay').click(() => {
+  $('.modal-close, .modal-background-overlay').click(function() {
     $('.details-modal').removeClass('details-modal-visible');
 
     setTimeout(() => {
@@ -68,7 +68,7 @@ $(document).ready(() => {
 
   let showCount = 3;
 
-  $('#show-more').click(() => {
+  $('#show-more').click(function() {
 
     $(this).addClass('show-more-button-active');
 
