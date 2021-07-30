@@ -1,2 +1,6 @@
 /node_modules/
 /build/
+.DS_Store
+.idea/modules.xml
+.idea/rkoshevoy.github.io.iml
+.idea/vcs.xml

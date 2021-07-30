@@ -1,9 +1,9 @@
 // unnecessary need to remove
 
-// npm i gulp gulp-sass gulp-less gulp-plumber gulp-postcss gulp-autoprefixer css-mqpacker gulp-clean-css gulp-uncss gulp-sourcemaps gulp-rename gulp-cssbeautify browser-sync gulp-imagemin gulp-svgstore gulp-svgmin del gulp-uglify pump
+// npm i gulp sass gulp-sass gulp-plumber gulp-postcss gulp-autoprefixer css-mqpacker gulp-clean-css gulp-uncss gulp-sourcemaps gulp-rename gulp-cssbeautify browser-sync gulp-imagemin gulp-svgstore gulp-svgmin del gulp-uglify pump
 
-var gulp = require('gulp'),
-    sass = require('gulp-sass'),
+const gulp = require('gulp'),
+    sass = require('gulp-sass')(require('sass')),
     plumber = require('gulp-plumber'),
     postcss = require("gulp-postcss"),
     autoprefixer = require('gulp-autoprefixer'),
